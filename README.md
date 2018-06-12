@@ -1,6 +1,6 @@
 # mono-error
 
-Error classes for creating an error with metadata, and adding metadata to existing errors.
+Provide a way to add context to Errors by including metadata and wrapping errors
 
 ## DetailedError
 

@@ -1,7 +1,7 @@
 {
   "name": "mono-error",
   "version": "1.0.0",
-  "description": "",
+  "description": "Provide a way to add context to Errors by including metadata and wrapping errors",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register src/tests/*.test.ts",
