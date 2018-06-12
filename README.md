@@ -30,9 +30,7 @@ function doStuff(id: int) {
 
 ## Error Details
 
-The details interface enforces that details are simple to make it easier to send reasonable data to logging or analytics.
-Allowing nested objects or arrays in the details field makes it complicated to dig through, and also opens the possibility for
-loops. 
+The details on the error is a simple object that is easy to log via analytics or a logger like winston.
 
 ```
 try {
