@@ -9,6 +9,7 @@ export default class DetailedError extends Error {
 		super(msg);
 		this.details = details || {};
 		this.details.stack = this.stack;
+
 		// correct the class name for instanceof comparisons since this extends a builtin class
 		this.name = this.constructor.name;
 	}

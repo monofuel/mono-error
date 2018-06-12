@@ -10,6 +10,19 @@ describe('wrapped error', () => {
 
 		const wrapped = new WrappedError(err, 'barfoo', { bar: 'foo' });
 		assert.equal(wrapped.details.foo, 'bar');
-		assert.equal(wrapped.details.bar, 'bar');
-	})
+		assert.equal(wrapped.details.bar, 'foo');
+	});
+
+	it('instanceof checks should work', () => {
+		const err = new WrappedError(new Error(), 'foobar', { foo: 'bar' });
+		if (!(err instanceof Error)) {
+			throw new Error('WrappedError is not an instance of Error');
+		}
+		if (!(err instanceof DetailedError)) {
+			throw new Error('WrappedError is not an instance of DetailedError');
+		}
+		if (!(err instanceof WrappedError)) {
+			throw new Error('WrappedError is not an instance of DetailedError');
+		}
+	});
 });
