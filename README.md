@@ -4,6 +4,8 @@ Provide a way to add context to Errors by including metadata and wrapping errors
 
 ## DetailedError
 
+DetailedError is an Error that includes a details object, which defaults to having the stack as a property.
+
 ```
 function updateLocation(x: int, y: int) {
     throw new DetailedError('failed to do stuff', { x, y });
@@ -31,6 +33,7 @@ function doStuff(id: int) {
 ## Error Details
 
 The details on the error is a simple object that is easy to log via analytics or a logger like winston.
+The 'stack' property on details should get picked up by winston transports for rollbar or stackdriver
 
 ```
 try {
