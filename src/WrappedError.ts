@@ -3,7 +3,6 @@ import DetailedError, { Details } from './DetailedError';
 export default class WrappedError extends DetailedError {
 	constructor(err: Error | DetailedError, msg: string, details?: Details) {
 		super(msg, details);
-		this.name = this.constructor.name;
 		this.message = msg + ', caused by: ' + err.message;
 
 		this.stack = err.stack; // perserve original stack

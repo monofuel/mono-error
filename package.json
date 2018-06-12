@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Provide a way to add context to Errors by including metadata and wrapping errors",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register src/tests/*.test.ts",
     "lint": "tslint --project .",
