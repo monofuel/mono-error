@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/monofuel/mono-error.git"
   },
+  "bugs": {
+    "url": "https://github.com/monofuel/mono-error/issues"
+   },
   "license": "BSD-3-Clause",
   "devDependencies": {
     "mocha": "^5.2.0",
