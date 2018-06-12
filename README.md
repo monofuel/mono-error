@@ -1,6 +1,12 @@
 # mono-error
 
-Provide a way to add context to Errors by including metadata and wrapping errors
+Provide a way to add context to Errors by including metadata and wrapping errors.
+When throwing an Error, the function usually doesn't have very much context about state in the caller. Having parent functions
+catch errors and re-throw them with additional messages or metadata can give very helpful state to have when debugging.
+
+Error handling with asyncronous code (callbacks, promises, async-await) typically have bad stacktraces that are
+incomplete or unreadable without sourcemaps.
+Wrapping errors and extending the message with 'caused by' is a simple way to add readable information about the chain of execution in asyncronous situations.
 
 ## DetailedError
 
